@@ -1,0 +1,14 @@
+int rest(int x,int y,int n,int k)
+{
+    n--;
+    while(n>1)
+    {
+        if((n%x==2)&&(n%y==2))
+        {
+            k=n;
+            break;
+        }
+        n--;
+    }
+    return k;
+}
