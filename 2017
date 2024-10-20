@@ -1,0 +1,18 @@
+int duplicare(int a)
+{
+    int nou=0,p=1,ini=a;
+    while(a)
+    {
+        if((a%10)%2==0)
+        {
+            nou+=((a%10)/2)*p;
+            p=p*10;
+        }
+        nou+=a%10*p;
+        p=p*10;
+        
+        a/=10;
+    }
+    if(nou!=a)return nou;
+    return -1;
+}
