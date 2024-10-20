@@ -1,0 +1,16 @@
+int inserare(int a)
+{
+    int nou=0,p=1;
+    while(a>=10)
+    {
+        int unu=a%10;
+        nou+=a%10*p;
+        p=p*10;
+        a/=10;
+        nou+=(abs(a%10-unu))*p;
+        p=p*10;
+    }
+    nou+=a*p;
+    if(nou!=a)return nou;
+    return -1;
+}
