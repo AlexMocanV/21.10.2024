@@ -1,0 +1,17 @@
+int Impare(int a)
+{
+    int nou=0,p=1,ini=a;
+    while(a)
+    {
+        nou+=a%10*p;
+        p=p*10;
+        if((a%10)%2==1)
+        {
+            nou+=a%10*p;
+            p=p*10;
+        }
+        a/=10;
+    }
+    if(nou!=a)return nou;
+    return -1;
+}
