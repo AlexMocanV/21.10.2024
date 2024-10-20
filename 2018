@@ -1,0 +1,15 @@
+int resturi(int n,int x,int y,int r)
+{
+    int nr=0;
+    n--;
+    while(n>1)
+    {
+        if((n%x==r)&&(n%y==r))
+        {
+            nr++;
+            
+        }
+        n--;
+    }
+    return nr;
+}
