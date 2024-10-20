@@ -1,0 +1,38 @@
+int putere(int n)
+{
+    int i=2,p=1000000,mini=100000000;
+    while(i*i<n)
+    {
+        int nr=0;
+        while(n%i==0)
+        {
+            n/=i;nr++;
+        }
+        if(nr)
+        {
+            if(p>nr)
+            {
+                p=nr;
+                mini=i;
+            }
+            else if(p==nr)
+            {
+                mini=std::min(i,mini);
+            }
+        }
+        if(i*i>n)
+        {
+            if(p>1)
+            {
+                p=1;
+                mini=n;
+            }
+            else
+            {
+                mini=std::min(n,mini);
+            }
+        }
+        i++;
+    }
+    return mini;
+}
